@@ -1,8 +1,8 @@
 #####Question #1
 
 
-# This asks the user to enter in their first, middle, and last name. Then takes that input and assigns it to the
-# variable fullName.
+""" This asks the user to enter in their first, middle, and last name. Then takes that input and assigns it to the
+variable fullName."""
 fullName = input("Please enter your first, middle, and last name: ")
 
 # This separates the users input based on the spaces and assigns each input after the space to the variable nameList.
@@ -183,5 +183,5 @@ print("The highest number in the list is: {0:.2f}".format(maximumNumber))
 print("The total of the numbers in the list is: {0:.2f}".format(totalNumbers))
 
 #This line of code outputs The average of the numbers in the list is: then outputs the average variable,
-# formating it to round to only 2 decimal places.
+# formatting it to round to only 2 decimal places.
 print("The average of the numbers in the list is: {0:.2f}".format(average))
