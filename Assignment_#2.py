@@ -1,6 +1,16 @@
-####Question 1 Code:
+########################################################################################################Question 1 Code:
 
-####Question 2 Code:
+#doc later
+packageWeight = input("Enter the weight of the package: ")
 
-####Question 3 Code:
 
+
+#doc later
+#Use this for later
+#print("Shipping charge: ${0:10,.2f}".format())
+
+
+
+########################################################################################################Question 2 Code:
+
+########################################################################################################Question 3 Code:
