@@ -36,17 +36,20 @@
 
 ########################################################################################################Question 2 Code:
 
-#doc later
-
-grades = []
-
-#doc later
-for scoreNumber in range(1, 6):
-
+#This is the main function
+def main():
     #doc later
-    grade = float(input("Enter score {0:.0f}: ".format(scoreNumber)))
-    #doc later
-    grades.append(grade)
+    for scoreNumber in range(1, 6):
+        # doc later
+        grades = []
+        #doc later
+        grade = float(input("Enter score {0:.0f}: ".format(scoreNumber)))
+        #doc later
+        grades.append(grade)
+    print("Score\t Numeric Grade\t Letter Grade")
+
+#This calls the main function
+main()
 
 
 
