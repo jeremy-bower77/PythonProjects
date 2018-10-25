@@ -38,8 +38,26 @@
 
 #This is the main function
 def main():
+
     # doc later
     scoresList = []
+
+    # doc later
+    letterGrades = []
+
+    # doc later
+    firstScore = scoresList[0]
+    secondScore = scoresList[1]
+    thirdScore = scoresList[2]
+    fourthScore = scoresList[3]
+    fifthScore = scoresList[4]
+
+    # doc later
+    firstGrade = letterGrades[0]
+    secondGrade = letterGrades[1]
+    thirdGrade = letterGrades[2]
+    fourthGrade = letterGrades[3]
+    fifthGrade = letterGrades[4]
 
     #doc later
     for scoreNumber in range(1, 6):
@@ -48,28 +66,22 @@ def main():
         #doc later
         scoresList.append(score)
 
-    #doc later
-    firstScore = scoresList[0]
-    secondScore = scoresList[1]
-    thirdScore = scoresList[2]
-    fourthScore = scoresList[3]
-    fifthScore = scoresList[4]
+    # doc later
+    determine_grade(scoresList, letterGrades)
 
-    #doc later
+    # doc later
     print("\nScore\t Numeric Grade\t Letter Grade")
 
-    #doc later
+    #This outputs a simple ascii design
     ascii()
 
-    #doc later
-    determine_grade(scoresList)
-
-    #doc later
+    # This outputs a simple ascii design
     ascii()
 
 #doc later
-def determine_grade(scoresList):
+def determine_grade(scoresList, letterGrades):
 
+    #doc later
     aGradeMaximum = 100
     aGradeMinimum = 90
     bGradeMaximum = 89.99
@@ -89,36 +101,40 @@ def determine_grade(scoresList):
 
             # doc later
             letterGrade = "A"
-
+            #doc later
+            letterGrades.append(letterGrade)
 
         # doc later
         elif (score <= bGradeMaximum and score >= bGradeMinimum):
 
             # doc later
             letterGrade = "B"
-
+            # doc later
+            letterGrades.append(letterGrade)
 
         # doc later
         elif (score <= cGradeMaximum and score >= cGradeMinimum):
 
             # doc later
             letterGrade = "C"
-
+            # doc later
+            letterGrades.append(letterGrade)
 
         # doc later
         elif (score <= dGradeMaximum and score >= dGradeMinimum):
 
             # doc later
             letterGrade = "D"
-
+            # doc later
+            letterGrades.append(letterGrade)
 
         # doc later
         elif (score <= fGradeMaximum and score >= fGradeMinimum):
 
             # doc later
             letterGrade = "F"
-
-
+            #doc later
+            letterGrades.append(letterGrade)
 
 
 #This is some simple ascii design
