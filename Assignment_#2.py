@@ -45,6 +45,16 @@ def main():
     # doc later
     letterGrades = []
 
+    #doc later
+    for scoreNumber in range(1, 6):
+        #doc later
+        score = float(input("Enter score {0:.0f}: ".format(scoreNumber)))
+        #doc later
+        scoresList.append(score)
+
+    # doc later
+    determine_grade(scoresList, letterGrades)
+
     # doc later
     firstScore = scoresList[0]
     secondScore = scoresList[1]
@@ -59,21 +69,26 @@ def main():
     fourthGrade = letterGrades[3]
     fifthGrade = letterGrades[4]
 
-    #doc later
-    for scoreNumber in range(1, 6):
-        #doc later
-        score = float(input("Enter score {0:.0f}: ".format(scoreNumber)))
-        #doc later
-        scoresList.append(score)
-
-    # doc later
-    determine_grade(scoresList, letterGrades)
-
     # doc later
     print("\nScore\t Numeric Grade\t Letter Grade")
 
     #This outputs a simple ascii design
     ascii()
+
+    #doc later
+    print("Score 1:\t", firstScore, "\t", firstGrade)
+
+    # doc later
+    print("Score 2:\t", secondScore, "\t", secondGrade)
+
+    # doc later
+    print("Score 3:\t", thirdScore, "\t", thirdGrade)
+
+    # doc later
+    print("Score 4:\t", fourthScore, "\t", fourthGrade)
+
+    # doc later
+    print("Score 5:\t", fifthScore, "\t", fifthGrade)
 
     # This outputs a simple ascii design
     ascii()
