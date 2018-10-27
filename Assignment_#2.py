@@ -70,25 +70,25 @@ def main():
     fifthGrade = letterGrades[4]
 
     # doc later
-    print("\nScore\t Numeric Grade\t Letter Grade")
+    print("\nScore\t\t Numeric Grade\t Letter Grade")
 
     #This outputs a simple ascii design
     ascii()
 
     #doc later
-    print("Score 1:\t", firstScore, "\t", firstGrade)
+    print("Score 1: {0:10,.1f}".format(firstScore), "\t\t", firstGrade)
 
     # doc later
-    print("Score 2:\t", secondScore, "\t", secondGrade)
+    print("Score 2: {0:10,.1f}".format(secondScore), "\t\t", secondGrade)
 
     # doc later
-    print("Score 3:\t", thirdScore, "\t", thirdGrade)
+    print("Score 3: {0:10,.1f}".format(thirdScore), "\t\t", thirdGrade)
 
     # doc later
-    print("Score 4:\t", fourthScore, "\t", fourthGrade)
+    print("Score 4: {0:10,.1f}".format(fourthScore), "\t\t", fourthGrade)
 
     # doc later
-    print("Score 5:\t", fifthScore, "\t", fifthGrade)
+    print("Score 5: {0:10,.1f}".format(fifthScore), "\t\t", fifthGrade)
 
     # This outputs a simple ascii design
     ascii()
