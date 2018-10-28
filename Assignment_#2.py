@@ -53,6 +53,9 @@ def main():
         scoresList.append(score)
 
     # doc later
+    calc_average(scoresList)
+
+    # doc later
     determine_grade(scoresList, letterGrades)
 
     # doc later
@@ -61,6 +64,7 @@ def main():
     thirdScore = scoresList[2]
     fourthScore = scoresList[3]
     fifthScore = scoresList[4]
+    averageScore = scoresList[5]
 
     # doc later
     firstGrade = letterGrades[0]
@@ -68,9 +72,10 @@ def main():
     thirdGrade = letterGrades[2]
     fourthGrade = letterGrades[3]
     fifthGrade = letterGrades[4]
+    averageGrade = letterGrades[5]
 
     # doc later
-    print("\nScore\t\t Numeric Grade\t Letter Grade")
+    print("Score\t\t Numeric Grade\t Letter Grade")
 
     #This outputs a simple ascii design
     ascii()
@@ -92,6 +97,19 @@ def main():
 
     # This outputs a simple ascii design
     ascii()
+
+    #doc later
+    print("Average score: {0:2,f}".format(averageScore), "\t", averageGrade)
+
+
+#doc later
+def calc_average(scoresList):
+
+    # doc later
+    score = sum(scoresList) / len(scoresList)
+    #doc later
+    scoresList.append(score)
+
 
 #doc later
 def determine_grade(scoresList, letterGrades):
@@ -156,7 +174,7 @@ def determine_grade(scoresList, letterGrades):
 def ascii():
 
     #This is some simple ascii design
-    print("------------------------------------------------------------------")
+    print("-------------------------------------------------")
 
 #This calls the main function
 main()
