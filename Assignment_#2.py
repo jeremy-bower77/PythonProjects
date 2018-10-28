@@ -59,17 +59,6 @@ def main():
     determine_grade(scoresList, letterGrades)
 
     # doc later
-    averageScore = scoresList[5]
-
-    # doc later
-    firstGrade = letterGrades[0]
-    secondGrade = letterGrades[1]
-    thirdGrade = letterGrades[2]
-    fourthGrade = letterGrades[3]
-    fifthGrade = letterGrades[4]
-    averageGrade = letterGrades[5]
-
-    # doc later
     print("Score\t\t Numeric Grade\t Letter Grade")
 
     #This outputs a simple ascii design
