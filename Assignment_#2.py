@@ -39,7 +39,7 @@
 #This is the main function
 def main():
 
-    # doc later
+    #This is the score list
     scoresList = []
 
     # doc later
@@ -59,11 +59,6 @@ def main():
     determine_grade(scoresList, letterGrades)
 
     # doc later
-    firstScore = scoresList[0]
-    secondScore = scoresList[1]
-    thirdScore = scoresList[2]
-    fourthScore = scoresList[3]
-    fifthScore = scoresList[4]
     averageScore = scoresList[5]
 
     # doc later
@@ -81,25 +76,25 @@ def main():
     ascii()
 
     #doc later
-    print("Score 1: {0:10,.1f}".format(firstScore), "\t\t", firstGrade)
+    print("Score 1: {0:10,.1f}".format(scoresList[0]), "\t\t", letterGrades[0])
 
     # doc later
-    print("Score 2: {0:10,.1f}".format(secondScore), "\t\t", secondGrade)
+    print("Score 2: {0:10,.1f}".format(scoresList[1]), "\t\t", letterGrades[1])
 
     # doc later
-    print("Score 3: {0:10,.1f}".format(thirdScore), "\t\t", thirdGrade)
+    print("Score 3: {0:10,.1f}".format(scoresList[2]), "\t\t", letterGrades[2])
 
     # doc later
-    print("Score 4: {0:10,.1f}".format(fourthScore), "\t\t", fourthGrade)
+    print("Score 4: {0:10,.1f}".format(scoresList[3]), "\t\t", letterGrades[3])
 
     # doc later
-    print("Score 5: {0:10,.1f}".format(fifthScore), "\t\t", fifthGrade)
+    print("Score 5: {0:10,.1f}".format(scoresList[4]), "\t\t", letterGrades[4])
 
     # This outputs a simple ascii design
     ascii()
 
     #doc later
-    print("Average score: {0:2,f}".format(averageScore), "\t", averageGrade)
+    print("Average score: {0:2,f}".format(scoresList[5]), "\t", letterGrades[5])
 
 
 #doc later
@@ -180,3 +175,6 @@ def ascii():
 main()
 
 ########################################################################################################Question 3 Code:
+
+# def main():
+#
