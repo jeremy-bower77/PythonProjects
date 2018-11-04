@@ -188,31 +188,49 @@ def main():
     originalList = open("Q4-Data.txt", 'r')
 
     #doc later
-    print("Original List:")
-    ascii()
-
-    #doc later
     ogList = text_read(originalList)
 
-    #doc later
-    print("\nSorted List:")
+    # doc later
+    originalList.close()
+
+    # doc later
+    print("Original List:")
     ascii()
+    print(ogList)
 
     #doc later
     sortedList = list_sorted(ogList)
 
-    #doc later
-    print("\nTwo Dimension List:")
+    # doc later
+    print("\nSorted List:")
     ascii()
+    print(sortedList)
 
     #doc later
     twoDimensionList = new_list_create(sortedList)
 
+    # doc later
+    print("\nTwo Dimension List:")
+    ascii()
+    print(twoDimensionList)
 
     #doc later
     nameList, codeList, salaryList = list_separate(twoDimensionList)
 
+    # doc later
+    print("\nList of Names:")
+    ascii()
+    print(nameList)
 
+    # doc later
+    print("\nList of Codes:")
+    ascii()
+    print(codeList)
+
+    # doc later
+    print("\nList of Salaries:")
+    ascii()
+    print(salaryList)
 
 
 #doc later
@@ -220,12 +238,6 @@ def text_read(originalList):
 
     #doc later
     ogList = ([line.rstrip() for line in originalList])
-
-    #doc later
-    originalList.close()
-
-    #doc later
-    print(ogList)
 
     #doc later
     return ogList
@@ -239,9 +251,6 @@ def list_sorted(ogList):
     sortedList = sorted(ogList, key=lambda line: line.split(" ")[3], reverse=False)
 
     #doc later
-    print(sortedList)
-
-    #doc later
     return sortedList
 
 
@@ -251,9 +260,6 @@ def new_list_create(sortedList):
 
     #doc later
     twoDimensionList = [line.split(" ") for line in sortedList]
-
-    #doc later
-    print(twoDimensionList)
 
     #doc later
     return twoDimensionList
@@ -270,21 +276,6 @@ def list_separate(twoDimensionList):
 
     #doc later
     salaryList = [salary[3:4] for salary in twoDimensionList]
-
-    # doc later
-    print("\nList of Names:")
-    ascii()
-    print(nameList)
-
-    # doc later
-    print("\nList of Codes:")
-    ascii()
-    print(codeList)
-
-    # doc later
-    print("\nList of Salaries:")
-    ascii()
-    print(salaryList)
 
     #doc later
     return nameList, codeList, salaryList
