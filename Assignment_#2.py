@@ -210,7 +210,19 @@ def main():
 
 
     #doc later
-    list_separate(twoDimensionList)
+    nameList, codeList, salaryList = list_separate(twoDimensionList)
+
+    #doc later
+    print("\nList of Names:")
+    ascii()
+
+    #doc later
+    print("\nList of Codes:")
+    ascii()
+
+    #doc later
+    print("\nList of Salaries:")
+    ascii()
 
 
 #doc later
@@ -257,18 +269,21 @@ def new_list_create(sortedList):
     return twoDimensionList
 
 
-# #doc later
+#doc later
 def list_separate(twoDimensionList):
 
-    #doc later
-    nameList = [name[0][1] for name in twoDimensionList]
+    print(twoDimensionList[0][0:2])
 
     #doc later
-    codeList = [code[2] for code in twoDimensionList]
+    nameList = [name[0:2] for name in twoDimensionList]
 
     #doc later
-    salaryList = [salary[3] for salary in twoDimensionList]
+    codeList = [code[2:3] for code in twoDimensionList]
 
+    #doc later
+    salaryList = [salary[3:4] for salary in twoDimensionList]
+
+    #doc later
     return nameList, codeList, salaryList
 
 
