@@ -187,23 +187,47 @@ def main():
     #doc later
     originalList = open("Q4-Data.txt", 'r')
 
+
+    print("Original List:")
+    ascii()
     #doc later
-    text_read(originalList)
+    ogList = text_read(originalList)
+
+    print("\nSorted List:")
+    ascii()
+    #doc later
+    list_sorted(ogList)
+
+
 
 #doc later
 def text_read(originalList):
 
-   #doc later
-   print([line.rstrip() for line in originalList])
+    #doc later
+    ogList = ([line.rstrip() for line in originalList])
+    originalList.close()
+    print(ogList)
+    return ogList
 
-   #doc later
-   originalList.close()
+
+#doc later
+def list_sorted(ogList):
+
+    ogList.sort(key=lambda line: line.split()[-1])
+    # This joins the names in the list and joins them together with a , inbetween
+    # them
+    nameString = ", ".join(ogList)
+    print(nameString)
+
+    # #Not sure what to do here
+    # ogList.Sort(key=lambda line: line.split()[3])
+    #
+    # #Not sure what to do here
+    # sortedList = sorted(ogList, key=lambda txt: txt[3])
+    #
+    # print(sortedList)
 
 
-# #doc later
-# def list_sorted():
-#
-#     #doc later
 
 # #doc later
 # def new_list_create():
@@ -214,6 +238,12 @@ def text_read(originalList):
 # def list_separate():
 #
 #     #doc later
+
+#This is some simple ascii design
+def ascii():
+
+    #This is some simple ascii design
+    print("-----------------------------------------------------------------------------------------------------------")
 
 #doc later
 main()
