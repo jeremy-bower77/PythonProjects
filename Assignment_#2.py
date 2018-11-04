@@ -213,15 +213,11 @@ def text_read(originalList):
 #doc later
 def list_sorted(ogList):
 
+    #This can sort and print out the names but doesn't quite help.
     ogList.sort(key=lambda line: line.split()[-1])
-    # This joins the names in the list and joins them together with a , inbetween
-    # them
     nameString = ", ".join(ogList)
     print(nameString)
 
-    # #Not sure what to do here
-    # ogList.Sort(key=lambda line: line.split()[3])
-    #
     # #Not sure what to do here
     # sortedList = sorted(ogList, key=lambda txt: txt[3])
     #
