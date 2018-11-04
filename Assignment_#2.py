@@ -216,13 +216,19 @@ def main():
     print("\nList of Names:")
     ascii()
 
+    print(nameList)
+
     #doc later
     print("\nList of Codes:")
     ascii()
 
+    print(codeList)
+
     #doc later
     print("\nList of Salaries:")
     ascii()
+
+    print(salaryList)
 
 
 #doc later
@@ -271,8 +277,6 @@ def new_list_create(sortedList):
 
 #doc later
 def list_separate(twoDimensionList):
-
-    print(twoDimensionList[0][0:2])
 
     #doc later
     nameList = [name[0:2] for name in twoDimensionList]
