@@ -199,8 +199,14 @@ def main():
     ascii()
 
     #doc later
-    list_sorted(ogList)
+    sortedList = list_sorted(ogList)
 
+    #doc later
+    print("\nTwo Dimension List:")
+    ascii()
+
+    #doc later
+    new_list_create(sortedList)
 
 
 #doc later
@@ -234,10 +240,18 @@ def list_sorted(ogList):
 
 
 
-# #doc later
-# def new_list_create():
-#
-#     #doc later
+#doc later
+def new_list_create(sortedList):
+
+    #doc later
+    twoDimensionList = [line.split(" ") for line in sortedList]
+
+    #doc later
+    print(twoDimensionList)
+
+    #doc later
+    return twoDimensionList
+
 
 # #doc later
 # def list_separate():
