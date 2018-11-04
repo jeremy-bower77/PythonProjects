@@ -206,7 +206,11 @@ def main():
     ascii()
 
     #doc later
-    new_list_create(sortedList)
+    twoDimensionList = new_list_create(sortedList)
+
+
+    #doc later
+    list_separate(twoDimensionList)
 
 
 #doc later
@@ -254,9 +258,19 @@ def new_list_create(sortedList):
 
 
 # #doc later
-# def list_separate():
-#
-#     #doc later
+def list_separate(twoDimensionList):
+
+    #doc later
+    nameList = [name[0][1] for name in twoDimensionList]
+
+    #doc later
+    codeList = [code[2] for code in twoDimensionList]
+
+    #doc later
+    salaryList = [salary[3] for salary in twoDimensionList]
+
+    return nameList, codeList, salaryList
+
 
 #This is some simple ascii design
 def ascii():
