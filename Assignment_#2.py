@@ -187,14 +187,17 @@ def main():
     #doc later
     originalList = open("Q4-Data.txt", 'r')
 
-
+    #doc later
     print("Original List:")
     ascii()
+
     #doc later
     ogList = text_read(originalList)
 
+    #doc later
     print("\nSorted List:")
     ascii()
+
     #doc later
     list_sorted(ogList)
 
@@ -205,23 +208,29 @@ def text_read(originalList):
 
     #doc later
     ogList = ([line.rstrip() for line in originalList])
+
+    #doc later
     originalList.close()
+
+    #doc later
     print(ogList)
+
+    #doc later
     return ogList
 
 
 #doc later
 def list_sorted(ogList):
 
-    #This can sort and print out the names but doesn't quite help.
-    ogList.sort(key=lambda line: line.split()[-1])
-    nameString = ", ".join(ogList)
-    print(nameString)
 
-    # #Not sure what to do here
-    # sortedList = sorted(ogList, key=lambda txt: txt[3])
-    #
-    # print(sortedList)
+    #doc later
+    sortedList = sorted(ogList, key=lambda line: line.split(" ")[3], reverse=False)
+
+    #doc later
+    print(sortedList)
+
+    #doc later
+    return sortedList
 
 
 
