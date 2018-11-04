@@ -212,23 +212,7 @@ def main():
     #doc later
     nameList, codeList, salaryList = list_separate(twoDimensionList)
 
-    #doc later
-    print("\nList of Names:")
-    ascii()
 
-    print(nameList)
-
-    #doc later
-    print("\nList of Codes:")
-    ascii()
-
-    print(codeList)
-
-    #doc later
-    print("\nList of Salaries:")
-    ascii()
-
-    print(salaryList)
 
 
 #doc later
@@ -286,6 +270,21 @@ def list_separate(twoDimensionList):
 
     #doc later
     salaryList = [salary[3:4] for salary in twoDimensionList]
+
+    # doc later
+    print("\nList of Names:")
+    ascii()
+    print(nameList)
+
+    # doc later
+    print("\nList of Codes:")
+    ascii()
+    print(codeList)
+
+    # doc later
+    print("\nList of Salaries:")
+    ascii()
+    print(salaryList)
 
     #doc later
     return nameList, codeList, salaryList
