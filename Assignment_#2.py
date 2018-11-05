@@ -6,7 +6,7 @@ lowLimit = 2
 midLimit = 6
 highLimit = 10
 
-'''This asks the user to enter in the weight of the package and assigns it to the variable packageWeight.'''
+# This asks the user to enter in the weight of the package and assigns it to the variable packageWeight.
 packageWeight = eval(input("Enter the weight of the package: "))
 
 # This is an if statement that checks to see if the packageWeight is below the highLimit
@@ -193,103 +193,110 @@ main()
 
 #######################################################################################################Question 3 Code:
 
-#doc later
+# This is the main function
 def main():
 
-    #doc later
+    # This assigns reads the Q4-Data.txt file and assigns it to the originalList variable
     originalList = open("Q4-Data.txt", 'r')
 
-    #doc later
+    # This calls the list_sorted function and passing the originalList. Then it is assigned to the variable ogList.
     ogList = text_read(originalList)
 
-    # doc later
+    # This closes the originalList file
     originalList.close()
 
-    # doc later
+    # This outputs the header Original List: and then calls the ascii function. Followed by outputting the ogList.
     print("Original List:")
     ascii()
     print(ogList)
 
-    #doc later
+    # This calls the list_sorted function and passing the ogList. Then it is assigned to the variable sortedList.
     sortedList = list_sorted(ogList)
 
-    # doc later
+    # This outputs the header Sorted List: and then calls the ascii function. Followed by outputting the sortedList.
     print("\nSorted List:")
     ascii()
     print(sortedList)
 
-    #doc later
+    # This calls the new_list_create function and passing the sortedList. Then it is assigned to the variable
+    # twoDimensionList.
     twoDimensionList = new_list_create(sortedList)
 
-    # doc later
+    # This outputs the header Two Dimension List: and then calls the ascii function. Followed by outputting the
+    # twoDimensionList.
     print("\nTwo Dimension List:")
     ascii()
     print(twoDimensionList)
 
-    #doc later
+    # This calls the list_separate function and passing the twoDimensionList. Then it is assigned to the variables
+    # nameList, codeList, salaryList.
     nameList, codeList, salaryList = list_separate(twoDimensionList)
 
-    # doc later
+    # This outputs the header List of Names: and then calls the ascii function. Followed by outputting the
+    # nameList.
     print("\nList of Names:")
     ascii()
     print(nameList)
 
-    # doc later
+    # This outputs the header List of Codes: and then calls the ascii function. Followed by outputting the
+    # codeList.
     print("\nList of Codes:")
     ascii()
     print(codeList)
 
-    # doc later
+    # This outputs the header List of Salaries: and then calls the ascii function. Followed by outputting the
+    # salaryList.
     print("\nList of Salaries:")
     ascii()
     print(salaryList)
 
 
-#doc later
+# This is the text_read that calls the originalList from the main.
 def text_read(originalList):
 
-    #doc later
+    # This line of code assigns the originalList to the variable ogList
     ogList = ([line.rstrip() for line in originalList])
 
-    #doc later
+    # This returns the ogList to the main
     return ogList
 
 
-#doc later
+# This is the list_sorted that calls the ogList from the main.
 def list_sorted(ogList):
 
 
-    #doc later
+    # This line of code sorts the ogList by the salary in assending order and assigns it to the variable sortedList
     sortedList = sorted(ogList, key=lambda line: line.split(" ")[3], reverse=False)
 
-    #doc later
+    # This returns the sortedList to the main
     return sortedList
 
 
 
-#doc later
+# This is the new_list_create that calls the sortedList from the main.
 def new_list_create(sortedList):
 
-    #doc later
+    # This takes each object in the sortedList and splits them apart and assigns it to the twoDimensionList variable
     twoDimensionList = [line.split(" ") for line in sortedList]
 
-    #doc later
+    # This returns the twoDimensionList to the main
     return twoDimensionList
 
 
-#doc later
+# This is the list_separate that calls the twoDimensionList from the main.
 def list_separate(twoDimensionList):
 
-    #doc later
-    nameList = [name[0:2] for name in twoDimensionList]
 
-    #doc later
-    codeList = [code[2:3] for code in twoDimensionList]
+    # This assigns the first two elements in the twoDimensionList and assigns it to the nameList
+    nameList = [' '.join(name[0:2])for name in twoDimensionList]
 
-    #doc later
-    salaryList = [salary[3:4] for salary in twoDimensionList]
+    # This assigns the third element in the twoDimensionList and assigns it to the codeList
+    codeList = [' '.join(code[2:3]) for code in twoDimensionList]
 
-    #doc later
+    # This assigns the fourth element in the twoDimensionList and assigns it to the salaryList
+    salaryList = [' '.join(salary[3:4]) for salary in twoDimensionList]
+
+    # This returns nameList, codeList, salaryList to the main
     return nameList, codeList, salaryList
 
 
@@ -299,5 +306,5 @@ def ascii():
     #This is some simple ascii design
     print("-----------------------------------------------------------------------------------------------------------")
 
-#doc later
+# This calls the main function
 main()
